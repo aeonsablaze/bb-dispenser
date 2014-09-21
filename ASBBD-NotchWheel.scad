@@ -2,6 +2,7 @@
 
 gearr = 10; //Radius of Gear (mm)
 bbsize = 1.25; //Size of bb to be dispensed (mm)
+skipint = 1; //Number of notches to skip each time.
 
 module notch(r){
 	rotate(r)
@@ -14,9 +15,10 @@ module notch(r){
 }
 
 module notchring() {
+	trueskip=skipint+1;
 	gearc = (2*PI*gearr);
 	gearint = 360/(gearc/bbsize);
-	notchcount=round((360-gearint)/(gearint*2));
+	notchcount=round(((360-gearint)/(gearint*2))/trueskip);
 	gearremain=360-(notchcount*gearint);
 	geargap=gearremain/notchcount;
 	for ( q = [0:gearint+geargap:360-geargap] ) {
