@@ -1,4 +1,4 @@
-//when laser cutting, material thickness must be [bbsize] or greater.
+// When laser cutting, material thickness must be [bbsize] or greater.
 
 gearr = 10; //Radius of Gear (mm)
 bbsize = 1.25; //Size of bb to be dispensed (mm)
@@ -37,24 +37,15 @@ module notchring() {
 
 module axle() {
 	truaxle=axlew*2;
-	scale(0.1,0.1,1)circle(truaxle*10);
+	scale([0.1,0.1,1])circle(truaxle*10);
 }
 
 module gear() {
-	linear_extrude(bbsize)difference() {
+	difference() {
 		circle(gearr);
 		notchring();
-		axle(axlew);
-	}
-}
-module gearwalls() {
-	for (p = [bbsize+1,-bbsize-1]) {
-		translate([0,0,p])linear_extrude(bbsize)difference() {
-			circle(gearr);
-			axle();
-		}
+		axle();
 	}
 }
 
 gear();
-gearwalls();
