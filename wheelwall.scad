@@ -1,7 +1,6 @@
 //when laser cutting, material thickness must be [bbsize] or greater.
 
-gearr = 10; //Radius of Gear (mm)
-axlew = 1; //Width of axle (mm)
+include <settings.scad>;
 
 module axle() {
 	truaxle=axlew*2;
