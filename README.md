@@ -1,8 +1,6 @@
-bb-dispenser
+Scads O' .SCADS
 ==================
 
-Required files for constructing an Airsoft BB Dispenser (work in progress, do not use!)
-
-Included:
-* OpenSCAD Files for laser cuttable and/or 3D printable parts.
-* Arduino code for driving stepper-motor and controls. (eventually...)
+This is a collections of OpenSCAD based 3d models in varying states
+of completeness that I have created at one time or another. Some are
+for very specific projects, others are just general utility objects.
