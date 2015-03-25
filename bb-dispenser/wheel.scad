@@ -1,5 +1,3 @@
-// When laser cutting, material thickness must be [bbsize] or greater.
-
 include <settings.scad>;
 
 module notch(r){
